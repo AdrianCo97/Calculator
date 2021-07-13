@@ -8,6 +8,17 @@ class NumberCalculator extends React.Component {
     };
   }
 
+  additionFunction = (event) => {
+    event.preventDefault();
+
+    let x = document.getElementById("x-input").value;
+    let y = document.getElementById("y-input").value;
+
+    let result = +x + +y;
+
+    this.setState({ sum: result });
+  };
+
   render() {
     return (
       <container>
