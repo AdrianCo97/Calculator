@@ -1,0 +1,19 @@
+.divStyle {
+  font-family: "Courier New", Courier, monospace;
+  background-color: gray;
+  border: solid black;
+  width: 500px;
+  padding: 20px;
+}
+
+.formStyle {
+  display: flex;
+  height: 30px;
+  width: 30px;
+}
+
+.inputStyle {
+  height: 30px;
+  border: solid black 2px;
+  margin: 10px;
+}
