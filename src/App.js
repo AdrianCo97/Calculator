@@ -1,5 +1,11 @@
+import NumberCalculator from "./components/NumberCalculator";
 function App() {
-  return <div>Hello</div>;
+  return (
+    <div>
+      <h2>A basic calculator</h2>
+      <NumberCalculator />
+    </div>
+  );
 }
 
 export default App;
