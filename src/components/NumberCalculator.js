@@ -6,19 +6,26 @@ class NumberCalculator extends React.Component {
     super(props);
 
     this.state = {
-      type: "addition",
+      type: "",
     };
+
+    this.typeHandler = this.typeHandler.bind(this);
   }
 
+  componentHandler(){
+    if (this.state.type === "addition") {
+      return <AdditionComponent />;
+    } else if (this.state.type === "multiplication") {
+      return <MultiplicationComponent />;
+    }
+  };
+
+
   render() {
-    const typeHandler = () => {
-      if (this.state.type === "addition") {
-        return <AdditionComponent />;
-      } else if (this.state.type === "multiplication") {
-        return <MultiplicationComponent />;
-      }
-    };
-    return <div id="content">{typeHandler()}</div>;
+    
+    return <div id="content">
+      {this.componentHandler()}
+    </div>;
   }
 }
 
