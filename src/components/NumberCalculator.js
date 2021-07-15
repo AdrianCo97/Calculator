@@ -9,7 +9,21 @@ class NumberCalculator extends React.Component {
       type: "",
     };
 
-    this.typeHandler = this.typeHandler.bind(this);
+    this.buttonHandler = this.buttonHandler.bind(this);
+    this.componentHandler = this.componentHandler.bind(this);
+  }
+
+  buttonHandler(event) {
+    let button = event.target.id;
+
+    switch (button) {
+      case "addition":
+        this.setState({ type: "addition" });
+        break;
+      case "multiplication":
+        this.setState({ type: "multiplication" });
+        break;
+    }
   }
 
   componentHandler(){
@@ -24,6 +38,10 @@ class NumberCalculator extends React.Component {
   render() {
     
     return <div id="content">
+      <nav>
+        <button id="addition" onClick={this.buttonHandler}>Addition</button>
+        <button id="multiplication" onClick={this.buttonHandler}>Multiplication</button>
+      </nav>
       {this.componentHandler()}
     </div>;
   }
