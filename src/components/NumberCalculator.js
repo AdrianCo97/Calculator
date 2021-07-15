@@ -5,6 +5,7 @@ class NumberCalculator extends React.Component {
 
     this.state = {
       sum: 0,
+      type: "",
     };
   }
 
