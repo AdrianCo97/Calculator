@@ -1,6 +1,7 @@
 import React from "react";
 import AdditionComponent from "./AdditionComponent";
 import MultiplicationComponent from "./MultiplicationComponent";
+import numberCalculatorStyle from "./numberCalculatorStyle.module.css";
 class NumberCalculator extends React.Component {
   constructor(props) {
     super(props);
@@ -39,8 +40,8 @@ class NumberCalculator extends React.Component {
     
     return <div id="content">
       <nav>
-        <button id="addition" onClick={this.buttonHandler}>Addition</button>
-        <button id="multiplication" onClick={this.buttonHandler}>Multiplication</button>
+        <button id="addition" className={numberCalculatorStyle.buttonStyle} onClick={this.buttonHandler}>Addition</button>
+        <button id="multiplication" className={numberCalculatorStyle.buttonStyle} onClick={this.buttonHandler}>Multiplication</button>
       </nav>
       {this.componentHandler()}
     </div>;

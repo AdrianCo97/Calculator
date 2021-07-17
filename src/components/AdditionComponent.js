@@ -39,7 +39,7 @@ class AdditionComponent extends React.Component {
             id="y-input"
             type="number"
           ></input>
-          <button>Calculate!</button>
+          <button className={numberCalculatorStyle.formButtonStyle}>Calculate!</button>
         </form>
         <h3>sum is: {this.state.sum}</h3>
       </div>
