@@ -31,13 +31,13 @@ class AdditionComponent extends React.Component {
           <input
             className={numberCalculatorStyle.inputStyle}
             id="x-input"
-            type="text"
+            type="number"
           ></input>
           <h3>+</h3>
           <input
             className={numberCalculatorStyle.inputStyle}
             id="y-input"
-            type="text"
+            type="number"
           ></input>
           <button>Calculate!</button>
         </form>
