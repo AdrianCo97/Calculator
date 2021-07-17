@@ -1,7 +1,7 @@
 import numberCalculatorStyle from "./numberCalculatorStyle.module.css";
 function Form(props) {
   return (
-    <form className={numberCalculatorStyle.formStyle} onSubmit={props.valueSubmit}>
+    <form className={numberCalculatorStyle.formStyle} onSubmit={props.valueSumbit}>
           <input
             className={numberCalculatorStyle.inputStyle}
             id="x-input"
