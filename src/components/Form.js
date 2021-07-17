@@ -7,7 +7,6 @@ function Form(props) {
             id="x-input"
             type="number"
           ></input>
-          <h3>+</h3>
           <input
             className={numberCalculatorStyle.inputStyle}
             id="y-input"

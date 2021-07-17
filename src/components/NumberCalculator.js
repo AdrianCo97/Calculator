@@ -24,6 +24,7 @@ class NumberCalculator extends React.Component {
       case "multiplication":
         this.setState({ type: "multiplication" });
         break;
+      default:
     }
   }
 
