@@ -8,7 +8,6 @@ class NumberCalculator extends React.Component {
 
     this.state = {
       type: "",
-      history: []
     };
 
     this.buttonHandler = this.buttonHandler.bind(this);
