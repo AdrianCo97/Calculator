@@ -8,6 +8,7 @@ class NumberCalculator extends React.Component {
 
     this.state = {
       type: "",
+      hidden: false, 
     };
 
     this.buttonHandler = this.buttonHandler.bind(this);
@@ -40,6 +41,8 @@ class NumberCalculator extends React.Component {
   render() {
     
     return <div id="content">
+
+      <button className={numberCalculatorStyle.buttonStyle}>Show</button>
       <nav>
         <button id="addition" className={numberCalculatorStyle.buttonStyle} onClick={this.buttonHandler}>Addition</button>
         <button id="multiplication" className={numberCalculatorStyle.buttonStyle} onClick={this.buttonHandler}>Multiplication</button>
