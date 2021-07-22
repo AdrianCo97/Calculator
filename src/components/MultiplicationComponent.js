@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "./Form";
 import numberCalculatorStyle from "./numberCalculatorStyle.module.css";
 class MultiplicationComponent extends React.Component {
   constructor() {
@@ -8,7 +9,7 @@ class MultiplicationComponent extends React.Component {
       product: 0,
     };
   }
-  additionFunction = (event) => {
+  multiplicationFunction = (event) => {
     event.preventDefault();
 
     let x = +document.getElementById("x-input").value;
@@ -23,23 +24,7 @@ class MultiplicationComponent extends React.Component {
     return (
       <div className={numberCalculatorStyle.divStyle}>
         <h2>Multiplication</h2>
-        <form
-          className={numberCalculatorStyle.formStyle}
-          onSubmit={this.additionFunction}
-        >
-          <input
-            className={numberCalculatorStyle.inputStyle}
-            id="x-input"
-            type="number"
-          ></input>
-          <h3>X</h3>
-          <input
-            className={numberCalculatorStyle.inputStyle}
-            id="y-input"
-            type="number"
-          ></input>
-          <button className={numberCalculatorStyle.formButtonStyle}>Calculate!</button>
-        </form>
+        <Form valueSumbit={this.multiplicationFunction} />
         <h3>product is: {this.state.product}</h3>
       </div>
     );
