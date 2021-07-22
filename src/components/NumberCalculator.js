@@ -43,11 +43,11 @@ class NumberCalculator extends React.Component {
   showHandler() {
     if (this.state.hidden === true) {
       this.setState({ hidden: false })
-      document.getElementById("showButton").innerText = "Show"
+      document.getElementById("showButton").innerText = "Hide"
     }
     else {
       this.setState({ hidden: true })
-      document.getElementById("showButton").innerText = "Hide"
+      document.getElementById("showButton").innerText = "Show"
     }
   }
 
