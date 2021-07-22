@@ -42,10 +42,12 @@ class NumberCalculator extends React.Component {
 
   showHandler() {
     if (this.state.hidden === true) {
-      this.setState({hidden: false})
+      this.setState({ hidden: false })
+      document.getElementById("showButton").innerText = "Hide"
     }
     else {
-      this.setState({hidden: true})
+      this.setState({ hidden: true })
+      document.getElementById("showButton").innerText = "Show"
     }
   }
 
@@ -54,7 +56,7 @@ class NumberCalculator extends React.Component {
     
     return <div id="content">
 
-      <button className={numberCalculatorStyle.buttonStyle} onClick={this.showHandler}>Show</button>
+      <button id="showButton" className={numberCalculatorStyle.buttonStyle} onClick={this.showHandler}>Show</button>
       <nav>
         <button id="addition" className={numberCalculatorStyle.buttonStyle} onClick={this.buttonHandler}>Addition</button>
         <button id="multiplication" className={numberCalculatorStyle.buttonStyle} onClick={this.buttonHandler}>Multiplication</button>
